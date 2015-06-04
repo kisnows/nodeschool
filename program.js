@@ -22,7 +22,7 @@ urls.forEach(function(url,index){
             end.push(true);
             if (isEnd()) {
                 for (var i = 0; i < datas.length; i++) {
-                    console.log(datas[i])
+                    console.log(datas[i]);
                 }
             }
         });
