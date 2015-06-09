@@ -3,7 +3,7 @@ var port = process.argv[2];
 
 var server = http.createServer(function(req,res){
     var post = '';
-    
+
     // console.log(req.method);
     if (req.method !== "POST") {
         return res.end("The method must be POST");
@@ -12,13 +12,13 @@ var server = http.createServer(function(req,res){
 
     req.on('data',function(data){
         post += data;
-    })
+    });
 
     req.on('end',function(){
         res.end(post.toString().toUpperCase());
-    })
+    });
 
-})
+});
 
 server.listen(port);
 

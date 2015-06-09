@@ -5,5 +5,5 @@ var data = fs.readFile(process.argv[2],function(err,data){
     }
     // console.log(data);
     var list = data.toString().split('\n');
-    console.log(list.length-1)
-})
+    console.log(list.length-1);
+});

@@ -6,15 +6,15 @@ module.exports = function(path,extname,callback){
         }else{
             // newList = [];
             list = list.filter(function(file){
-                return file.split('.')[1] === extname
+                return file.split('.')[1] === extname;
                 // if (file.split('.')[1]===extname) {
                 //     newList.push(file);
                 // }
-            })
+            });
         }
         callback(null,list);
-    })
-}
+    });
+};
 
 
 /*solution_filter.js:

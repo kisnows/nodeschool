@@ -14,15 +14,15 @@ var getTime = function(){
         // minute = date.getMinutes().toString().length>1?date.getMinutes():"0"+getMinutes();
     var time = year + "-"+month+"-"+day+" "+hour+":"+minute;
     function formate(time){
-        return (time.toString().length>1?'':'0')+time
+        return (time.toString().length>1?'':'0')+time;
     }
     return time;
-}
+};
 
 var server = net.createServer(function(socket){
     socket.write(getTime()+'\n');
     socket.end();
-})
+});
 server.listen(port);
 
 
