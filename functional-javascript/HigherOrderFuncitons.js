@@ -1,6 +1,8 @@
-function repeat(operation,num){
+function repeat(operation, num) {
+	"use strict";
+
 	for (var index = 0; index < num; index++) {
-		operation();	
+		operation();
 	}
 }
 module.exports = repeat;

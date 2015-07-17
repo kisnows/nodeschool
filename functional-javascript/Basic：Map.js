@@ -1,6 +1,6 @@
-function doubleAll(numbers){
-	numbers = numbers.map.call(numbers,function(num){
-		return num*2;
+function doubleAll(numbers) {
+	numbers = numbers.map.call(numbers, function (num) {
+		return num * 2;
 	})
 	return numbers;
 }
