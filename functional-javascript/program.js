@@ -1,38 +1,10 @@
-// function reduce(array, fn, init) {
-//   // SOLUTION GOES HERE
-//   var arrayCopy = array.slice()
-//   var i = 0;
-  
-//   return (function recursiveReduce(){
-//     if(!arrayCopy) return init;
-//     return recursiveReduce(arrayCopy,fn,fn(init,arrayCopy.shift(),i++,array))
-//   })(arrayCopy,fn,init)
-// }
-
-function reduce(array, fn, init) {
-  var arrayCopy = array.slice(), i = 0;
-
-  return (function recursiveReduce(arrayCopy, fn, init) {
-    if(!arrayCopy.length) return init;
-    return recursiveReduce(arrayCopy, fn, fn(init, arrayCopy.shift()), i++, array)
-  } (arrayCopy, fn, init));
+function arrayMap(arr, fn) {
+  // SOLUTION GOES HERE
+  //TODO fix this 
+  var array = [];
+  arr.reduce(function (pre, cur, index, arr) {
+    return array.push(fn(pre));
+  })
+  return array;
 }
-
-module.exports = reduce
-
-// Here's the official solution in case you want to compare notes:
-
-// ────────────────────────────────────────
-// ────────────────────────────────────────
-
-    // function reduce(arr, fn, initial) {
-    //   return (function reduceOne(index, value) {
-    //     if (index > arr.length - 1) return value // end conditiond
-    //     return reduceOne(index + 1, fn(value, arr[index], index, arr)) // calculate & pass values to next step
-    //   })(0, initial) // IIFE. kick off recursion with initial values
-    // }
-
-    // module.exports = reduce
-
-// ────────────────────────────────────────
-// ────────────────────────────────────────
+module.exports = arrayMap;

@@ -1,14 +1,3 @@
-// function reduce(array, fn, init) {
-//   // SOLUTION GOES HERE
-//   var arrayCopy = array.slice()
-//   var i = 0;
-  
-//   return (function recursiveReduce(){
-//     if(!arrayCopy) return init;
-//     return recursiveReduce(arrayCopy,fn,fn(init,arrayCopy.shift(),i++,array))
-//   })(arrayCopy,fn,init)
-// }
-
 function reduce(array, fn, init) {
   var arrayCopy = array.slice()
   var i = 0;
