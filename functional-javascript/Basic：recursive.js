@@ -10,10 +10,11 @@
 // }
 
 function reduce(array, fn, init) {
-  var arrayCopy = array.slice(), i = 0;
+  var arrayCopy = array.slice()
+  var i = 0;
 
   return (function recursiveReduce(arrayCopy, fn, init) {
-    if(!arrayCopy.length) return init;
+    if (!arrayCopy.length) return init;
     return recursiveReduce(arrayCopy, fn, fn(init, arrayCopy.shift()), i++, array)
   } (arrayCopy, fn, init));
 }
