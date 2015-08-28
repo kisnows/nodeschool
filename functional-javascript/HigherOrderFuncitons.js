@@ -1,14 +1,8 @@
-module.exports = function(namespace){
-	return console.log.bind(console,namespace);
+function repeat(operation, num) {
+	"use strict";
+
+	for (var index = 0; index < num; index++) {
+		operation();
+	}
 }
-
-
-// ─────────────────────────
-// ─────────────────────────
-
-//     module.exports = function(namespace) {
-//       return console.log.bind(console, namespace)
-//     }
-
-// ─────────────────────────
-// ─────────────────────────
+module.exports = repeat;
