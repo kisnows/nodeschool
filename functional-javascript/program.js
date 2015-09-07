@@ -1,25 +1,9 @@
-function arrayMap(arr, fn) {
-  // SOLUTION GOES HERE
-  //TODO fix this 
-  var array = [];
-  arr.reduce(function (pre, cur, index, arr) {
-    return array.push(fn(cur));
-  },{})
-  return array;
+function loadUsers(userIds, load, done) {
+  var users = []
+  for (var i = 0; i < userIds.length; i++) {
+    users.push(load(userIds[i]))
+  }
+  return users
 }
-module.exports = arrayMap;
 
-// Here's the official solution in case you want to compare notes:
-
-// ───────────────────────────────────
-// ───────────────────────────────────
-
-//     module.exports = function map(arr, fn, thisArg) {
-//       return arr.reduce(function(acc, item, index, arr) {
-//         acc.push(fn.call(thisArg, item, index, arr))
-//         return acc
-//       }, [])
-//     }
-
-// ───────────────────────────────────
-// ───────────────────────────────────
+module.exports = loadUsers

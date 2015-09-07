@@ -1,6 +1,6 @@
-#My learnyounode solutions.
+#My nodeschool solutions.
 
-###About [learnyounode](http://nodeschool.io)
+###About [nodeschool](http://nodeschool.io)
 >
 Learn the basics of node: asynchronous i/o, http.
 >
